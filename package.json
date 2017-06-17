@@ -1,0 +1,28 @@
+{
+  "name": "samples",
+  "version": "1.0.0",
+  "description": "Some sample front end code",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vramdhanie/javascriptsamples.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Interview",
+    "Algorithm"
+  ],
+  "author": "Vincent Ramdhanie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vramdhanie/javascriptsamples/issues"
+  },
+  "homepage": "https://github.com/vramdhanie/javascriptsamples#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
