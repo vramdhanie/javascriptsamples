@@ -35,7 +35,6 @@ function countPrimes(smallest, largest) {
                 obj[e] = 1;
             }
         });
-        console.log(i, obj);
         Object.keys(obj).forEach((k) => {
             if (k in primes) {
                 primes[k] = obj[k] > primes[k] ? obj[k] : primes[k];
@@ -47,11 +46,24 @@ function countPrimes(smallest, largest) {
     return primes;
 }
 
-let smallest = 2;
-let largest = 20;
-let primes = countPrimes(smallest, largest);
-console.log(Object.keys(primes).reduce((acc, k) => {
-    return acc * Math.pow(k, primes[k]);
-}, 1));
+/**
+ * Returns the LCM of a range of numbers
+ * @param start
+ * @param end
+ * @returns {*}
+ */
+function lcm(start, end){
+    let primes = countPrimes(start, end);
+    return Object.keys(primes).reduce((acc, k) => {
+        return acc * Math.pow(k, primes[k]);
+    }, 1);
+}
 
+
+
+module.exports = {
+    primeFactors:primeFactors,
+    countPrimes:countPrimes,
+    lcm:lcm
+};
 
