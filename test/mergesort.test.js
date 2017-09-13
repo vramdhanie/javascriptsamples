@@ -12,4 +12,8 @@ describe('Merge Sort', () => {
     it('should sort a reversed list', () => {
         sort([6,5,4,3,2,1], 0, 5).should.deep.equal([1,2,3,4,5,6]);
     })
+
+    it('should sort an empty array', () => {
+        sort([]).should.deep.equal([]);
+    })
 })
